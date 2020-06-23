@@ -10,7 +10,8 @@ class Page
     protected static $mustBeLoggedIn = false;
 
     protected static $mainStylesheets = [
-        'public/styles/layouts/row.css'
+        'public/styles/layouts/row.css',
+        'public/styles/main.css'
     ];
     protected static $mainScripts     = [
         'public/scripts/libs/component.js',

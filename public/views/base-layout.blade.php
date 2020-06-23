@@ -20,6 +20,7 @@
 
 </head>
 <body>
+    <div class="background-image"></div>
     {{-- Include Page Content --}}
     {!! $page->content !!}
 </body>

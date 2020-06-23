@@ -164,7 +164,7 @@ afterload_execution.push(function(){
                     window.location.hash = href[href.length-1];
 
                     document.querySelector('.actor-perview').classList.add('show');
-                    perviewActorEventsInit(button.getBoundingClientRect().left,button.getBoundingClientRect().top)
+                    perviewActorEventsInit(button.offsetLeft ,button.offsetTop)
                 });
             }
         });

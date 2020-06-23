@@ -135,6 +135,7 @@ body {
 
 .actor {
     z-index: 1;
+    filter: drop-shadow(30px 10px 8px black);
 }
 
 .actor.scaled-up {
@@ -162,6 +163,10 @@ body {
 .actor.blured-up {
     filter: blur(8px);
     -webkit-filter: blur(8px);
+}
+
+.publikume {
+    filter: drop-shadow(30px 10px 8px black);
 }
 
 .publikume.slide-up-16[delay="0.1s"] {
@@ -256,6 +261,7 @@ body {
 
 .actor.hide {
     opacity: 0;
+    filter: none;
 }
 
 .actor-perview {

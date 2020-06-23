@@ -1,0 +1,13 @@
+.table {
+    width: 100%;
+}
+
+.table > .body {
+    width: 100%;
+}
+
+.table > .body > ul.row {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}

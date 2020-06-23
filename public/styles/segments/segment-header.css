@@ -1,0 +1,23 @@
+.header {
+    background: var(--color-midnight-blue);
+    height: var(--dimension-header-height);
+    margin: 0;
+    width: 100%;
+}
+
+button.a span {
+    color: whitesmoke;
+    height: max-content;
+}
+
+.header > .header-desktop {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 100%;
+}
+
+.header > .mobile {
+
+}

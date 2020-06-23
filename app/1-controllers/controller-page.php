@@ -11,10 +11,12 @@ class Page
 
     protected static $mainStylesheets = [
         'public/styles/layouts/row.css',
+        'public/styles/layouts/font-icons.css',
         'public/styles/main.css'
     ];
     protected static $mainScripts     = [
         'public/scripts/libs/component.js',
+        'public/scripts/libs/font-icons.js',
         'public/scripts/main.js',
     ];
 

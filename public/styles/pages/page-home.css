@@ -309,8 +309,7 @@ body {
     margin-right: 0;
 }
 
-img.parview-actor {
-}
+img.parview-actor {}
 
 img.parview-actor.init {
     opacity: 0;
@@ -320,4 +319,16 @@ img.parview-actor.init {
 img.parview-actor.moving {
     opacity: 1;
     animation: actor-focus 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.actor-perview {
+    color: whitesmoke;
+}
+
+.actor-perview .title {
+    font-size: 24px;
+}
+
+.actor-perview .info {
+    font-size: 16px;
 }

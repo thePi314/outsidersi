@@ -43,3 +43,7 @@
 .row > .col-9 {
     width: calc(100% / 10 * 9);
 }
+
+.row.align-center {
+    text-align: center;
+}

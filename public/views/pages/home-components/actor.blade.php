@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-3">
-        <img class="parview-actor init" src="{{$actor->imageUrl}}" alt="">
+        <img class="parview-actor align-center init" src="{{$actor->imageUrl}}" alt="">
     </div>
     <div class="col-7">
         <div class="title">Hello Actor</div>

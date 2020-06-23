@@ -1,3 +1,13 @@
+/* fonts */
+@font-face {
+    font-family: 'rock-and-roll';
+    src: url('../fonts/music-rock-and-roll.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'mrlje';
+    src: url('../fonts/mrlje.ttf') format('truetype');
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,8 +15,11 @@ body {
 
 body > .background-image {
     position: absolute;
-    background: url('/public/images/background-02.png');
-    width: 100vw;
-    height: 100vh;
-    filter: blur(2px);
+    background: url('/public/images/background-03-scalable.png');
+    width: 110vw;
+    height: 110vh;
+    filter: blur(4px);
+    background-size: 416px;
+    top: -8px;
+    left: -8px;
 }

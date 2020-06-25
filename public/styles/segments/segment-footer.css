@@ -1,0 +1,11 @@
+.footer {
+    position: relative;
+    padding: 8px;
+    background:#101010;
+}
+
+.footer .socialmedia {
+    font-family: socialmedia;
+    color: whitesmoke;
+    font-size: 48px;
+}

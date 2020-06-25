@@ -21,7 +21,14 @@
 </head>
 <body>
     <div class="background-image"></div>
+    {{-- Header --}}
+    @if ($page->hasHeader)
+        @include('header')
+    @endif
+
     {{-- Include Page Content --}}
     {!! $page->content !!}
+
+    @include('footer')
 </body>
 </html>

@@ -334,7 +334,8 @@ img.parview-actor {
     top: -12px;
     left: -6px;
     box-shadow: inset 0px 0px 4px black;
-    border-bottom: solid 2px black;
+    border-bottom: solid 12px black;
+    border-top: solid 12px black;
 }
 
 .content-line .title {
@@ -350,8 +351,9 @@ img.parview-actor {
     margin: 0;
 }
 
+.gallery > .background {
+    border-top: none;
+}
+
 .news-pannel {}
 
-.news-pannel > .background {
-    border-top: solid 2px black;
-}

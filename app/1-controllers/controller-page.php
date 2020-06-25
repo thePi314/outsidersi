@@ -13,7 +13,8 @@ class Page
         'public/styles/main.css',
         'public/styles/layouts/row.css',
         'public/styles/layouts/font-icons.css',
-        'public/styles/segments/segment-header.css'
+        'public/styles/segments/segment-header.css',
+        'public/styles/segments/segment-footer.css'
     ];
     protected static $mainScripts     = [
         'public/scripts/libs/component.js',

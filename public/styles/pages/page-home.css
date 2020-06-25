@@ -69,23 +69,16 @@
 @keyframes actor-focus {
     0% {
         position: absolute;
-        left: var(--position-actor-x);
-        top: var(--position-actor-y);
+        transform: translateX(-128px);
+        transform-origin: 50% 50%;
     }
     100%{
-        left:var(--target-actor-x);
-        top:var(--target-actor-y)
+        transform: translateX(0);
     }
 }
 @keyframes timer {
     100% {}
 } 
-  
-body {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
 
 .fullscreen {
     display: flex;
@@ -116,17 +109,6 @@ body {
 
 .fullscreen > .background-layer.v-bottom {
     bottom: 0;
-}
-
-.background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    opacity: 0;
-    background: black;
 }
 
 .actors-view > * {
@@ -309,15 +291,7 @@ body {
     margin-right: 0;
 }
 
-img.parview-actor {}
-
-img.parview-actor.init {
-    opacity: 0;
-    animation: timer 0.1s
-}
-
-img.parview-actor.moving {
-    opacity: 1;
+img.parview-actor {
     animation: actor-focus 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
@@ -331,4 +305,53 @@ img.parview-actor.moving {
 
 .actor-perview .info {
     font-size: 16px;
+}
+
+.content-line {
+    position: relative;
+    margin: 64px 0;
+
+    width: 100%;
+    min-height: 256px;
+
+    box-shadow: 0px 0px 24px black;   
+}
+
+.content-line > * {
+    position: relative;
+    margin-left: 32px;
+}
+
+.content-line > .background {
+    margin: 0;
+    position: absolute;
+    height: 106%;
+    width: 120%;
+
+    background: url('/public/images/background-03-scalable-darken.png');
+    filter: blur(1px);
+    background-size: 256px;
+    top: -12px;
+    left: -6px;
+    box-shadow: inset 0px 0px 4px black;
+    border-bottom: solid 2px black;
+}
+
+.content-line .title {
+    font-family: Arial;
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+.gallery {
+    height: 192px;
+    box-shadow: none;
+
+    margin: 0;
+}
+
+.news-pannel {}
+
+.news-pannel > .background {
+    border-top: solid 2px black;
 }

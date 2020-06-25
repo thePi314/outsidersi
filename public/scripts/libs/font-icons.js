@@ -1,6 +1,6 @@
 function createIcons(amount,font,listSet,min_x,min_y,max_x,max_y) {
     let colors = [
-        'yellow' , 'white' , 'darkblue'
+        'grey' , 'white' , 'lightgrey' 
     ]
 
     let list = [];

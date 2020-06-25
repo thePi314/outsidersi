@@ -35,29 +35,6 @@ function createPublikumeRow(publikumeAmount) {
     return row;
 }
 
-
-function perviewActorEventsInit(s_x,s_y) {
-    let actor = document.querySelector('.parview-actor');
-    
-    actor.addEventListener('animationend',()=>{
-        if(actor.classList.contains('init')) {
-            document.documentElement.style.setProperty('--position-actor-y', s_x + 'px');
-            document.documentElement.style.setProperty('--position-actor-x', s_y + 'px');
-
-            document.documentElement.style.setProperty('--target-actor-y', actor.getBoundingClientRect().top + 'px');
-            document.documentElement.style.setProperty('--target-actor-x', actor.getBoundingClientRect().left + 'px');
-
-            actor.classList.remove('init');
-            actor.classList.add('moving');
-        }
-        else {
-            if(actor.classList.contains('moving')) {
-                actor.classList.remove('moving');
-            }
-        }
-    });
-}
-
 /* Init Dashboard ScriptRouter */
 afterload_execution.push(function(){
     ScriptRouter.components = [
@@ -164,7 +141,6 @@ afterload_execution.push(function(){
                     window.location.hash = href[href.length-1];
 
                     document.querySelector('.actor-perview').classList.add('show');
-                    perviewActorEventsInit(button.offsetLeft ,button.offsetTop)
                 });
             }
         });

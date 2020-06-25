@@ -10,9 +10,10 @@ class Page
     protected static $mustBeLoggedIn = false;
 
     protected static $mainStylesheets = [
+        'public/styles/main.css',
         'public/styles/layouts/row.css',
         'public/styles/layouts/font-icons.css',
-        'public/styles/main.css'
+        'public/styles/segments/segment-header.css'
     ];
     protected static $mainScripts     = [
         'public/scripts/libs/component.js',

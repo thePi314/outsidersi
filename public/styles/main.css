@@ -7,14 +7,20 @@
     font-family: 'mrlje';
     src: url('../fonts/mrlje.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'hangin';
+    src: url('../fonts/hangin.ttf') format('truetype');
+}
 
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    padding-bottom: 32px;
 }
 
 body > .background-image {
-    position: absolute;
+    position: fixed;
     background: url('/public/images/background-03-scalable.png');
     width: 110vw;
     height: 110vh;

@@ -29,6 +29,8 @@
     z-index: 1000;
     background:#101010;
     padding-bottom: 4px;
+
+    top: 0;
 }
 
 .header > .header-item {

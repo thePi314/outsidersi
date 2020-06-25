@@ -7,7 +7,7 @@
     <title>Brm Brm Sistem</title>
 
     
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> --}}
     {{-- Include Styles --}}
     @foreach ($page->stylesheets as $item)
         <link rel="stylesheet" href="{{$item}}">

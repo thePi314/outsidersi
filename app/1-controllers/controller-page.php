@@ -13,6 +13,7 @@ class Page
         'public/styles/main.css',
         'public/styles/layouts/row.css',
         'public/styles/layouts/font-icons.css',
+        'public/styles/layouts/content-line.css',
         'public/styles/segments/segment-header.css',
         'public/styles/segments/segment-footer.css'
     ];

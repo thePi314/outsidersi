@@ -2,10 +2,12 @@
 
     use Controllers\Session;
     use Controllers\WLRouter;
+    use Pages\AuthPage;
+    use Pages\DashboardPage;
     use Pages\HomePage;
     use Pages\SchedulerPage;
 
-Session::start();
+    Session::start();
 
     WLRouter::route('/',function(){
         header('Location: /home');
@@ -16,4 +18,16 @@ Session::start();
     WLRouter::route('/scheduler',function(){
         echo SchedulerPage::buildPage();
     });
+
+    WLRouter::route('/login',function(){
+        echo AuthPage::buildPage();
+    });
+    WLRouter::route('/dashboard',function(){
+        if( Session::get('user-id') != null )
+            echo DashboardPage::buildPage();
+        else
+            header('Location: /login');
+    });
+
+    exit(200);
 ?>

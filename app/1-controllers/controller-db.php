@@ -7,7 +7,7 @@ class DataBase
     protected static $host = 'localhost';
     protected static $user = 'server';
     protected static $pass = 'RotRot.314.RotRot';
-    protected static $db   = 'autoskola';
+    protected static $db   = 'outsiders';
 
     protected $connection = null;
 

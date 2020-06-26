@@ -7,6 +7,7 @@ use Controllers\WLBlade;
 class Page
 {
     protected static $hasHeader      = true;
+    protected static $hasFooter      = true;
     protected static $mustBeLoggedIn = false;
 
     protected static $mainStylesheets = [
@@ -14,6 +15,7 @@ class Page
         'public/styles/layouts/row.css',
         'public/styles/layouts/font-icons.css',
         'public/styles/layouts/content-line.css',
+        'public/styles/layouts/box.css',
         'public/styles/segments/segment-header.css',
         'public/styles/segments/segment-footer.css'
     ];
@@ -52,6 +54,7 @@ class Page
         $page->content     = static::render();
 
         $page->hasHeader   = static::$hasHeader;
+        $page->hasFooter   = static::$hasFooter;
 
         return WLBlade::render('base-layout',['page'=>$page]);
     }

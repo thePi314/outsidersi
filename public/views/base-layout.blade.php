@@ -29,6 +29,8 @@
     {{-- Include Page Content --}}
     {!! $page->content !!}
 
-    @include('footer')
+    @if ($page->hasFooter)
+        @include('footer')
+    @endif
 </body>
 </html>

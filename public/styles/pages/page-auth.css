@@ -1,9 +1,0 @@
-body {
-    display: flex;
-    flex-flow: column;
-    min-height: calc(100vh);
-}
-
-body > * {
-    margin: auto;
-}

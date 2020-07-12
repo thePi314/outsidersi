@@ -1,4 +1,4 @@
-.footer {
+body > .footer {
     position: relative;
     padding: 8px;
     background:#101010;
@@ -7,7 +7,7 @@
     margin-top: auto;
 }
 
-.footer .socialmedia {
+body > .footer .socialmedia {
     font-family: socialmedia;
     color: whitesmoke;
     font-size: 48px;

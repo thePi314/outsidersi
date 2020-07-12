@@ -4,8 +4,6 @@ namespace Controllers;
 
 class WLRouter
 {
-    private $requestUrl;
-    private $session;
     protected static $data        = [];
     protected static $dataFetched = false;
 

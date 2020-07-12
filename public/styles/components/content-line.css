@@ -1,0 +1,97 @@
+.content-line {
+    display: block;
+    width: 100%;
+
+    margin: 32px 0;
+
+    min-height: 256px;
+    background: #1f1f20;
+
+    border-bottom: 2px solid #101010;
+}
+
+.content-line > .big-title {
+    display: block;
+    width: calc(100% - 32px);
+
+    color: whitesmoke;
+    font-size: 24px;
+
+    background: #101010;
+
+    padding-left: 32px;
+}
+
+.content-line > .content {
+    display: flex;
+    flex-flow: row;
+
+    overflow-x: hidden;
+
+    margin-top: 8px;
+}
+
+.content-line > .content > .box {
+    margin: auto;
+    position: relative;
+    
+    min-height: 192px;
+    display: none;
+    box-shadow: 0px 0px 12px black;
+}
+.content-line > .content > .box.show {
+    display: flex;
+}
+
+
+.content-line > .content > .box > .box-background {
+    position: absolute;
+    
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 100%;
+    width: 100%;
+}
+
+.content-line > .content > .box > .box-title {
+    margin: auto;
+
+    font-size: 32px;
+    font-family: Arial;
+
+    color: whitesmoke;
+    position: relative;
+}
+.content-line > .content > .box > .box-content {
+    display: none;
+    
+    margin: auto;
+    
+    color: whitesmoke;
+    position: relative;
+}
+
+.content-line > .content > .box.show:hover > .box-background {
+    filter: brightness(50%);
+}
+.content-line > .content > .box.show:hover > .box-title {
+    display: none;
+}
+.content-line > .content > .box.show:hover > .box-content {
+    display: block;
+}
+
+.content-line > .content > * {
+    width: calc((100% - 64px) / 6);
+}
+
+@media (max-width: 738px) {
+    .content-line > .content {
+        flex-flow: column;
+    }
+    
+    .content-line > .content > .box {
+        width: 80%;
+        margin: 10px auto;
+    }
+}

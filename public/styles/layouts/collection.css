@@ -1,0 +1,13 @@
+.collection {
+    display: flex;
+    width: calc(100% - 32px);
+    flex-flow: row wrap;
+
+    padding: 16px;
+
+    justify-content: center;
+}
+
+.collection > * {
+    margin: 4px;
+}

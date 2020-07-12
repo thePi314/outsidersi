@@ -1,19 +1,14 @@
-/* fonts */
 @font-face {
-    font-family: 'rock-and-roll';
-    src: url('../fonts/music-rock-and-roll.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'mrlje';
-    src: url('../fonts/mrlje.ttf') format('truetype');
+    font-family: 'socialmedia';
+    src: url('../fonts/socialmedia.ttf') format('truetype');
 }
 @font-face {
     font-family: 'hangin';
     src: url('../fonts/hangin.ttf') format('truetype');
 }
-@font-face {
-    font-family: 'socialmedia';
-    src: url('../fonts/socialmedia.ttf') format('truetype');
+
+html {
+    background: slategray;
 }
 
 body {
@@ -21,18 +16,50 @@ body {
     padding: 0;
     overflow-x: hidden;
 
-    min-height: 100vh;
     display: flex;
     flex-flow: column;
+    min-height: 100vh;
+    min-width: 100vw;
+
+
+    padding-top: 64px;
 }
 
-body > .background-image {
-    position: fixed;
-    background: url('/public/images/background-03-scalable.png');
-    width: 110vw;
-    height: 110vh;
-    filter: blur(4px);
-    background-size: 416px;
-    top: -8px;
-    left: -8px;
+body > .background {
+	background: url('/public/images/background.png');
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    filter: opacity(80%)
+}
+
+.page-title {
+	margin: auto;
+	font-size: 48px;
+	font-family: Arial;
+	text-transform: uppercase;
+	font-weight: 800;
+	background: #101010;
+	padding: 0 64px;
+	color: whitesmoke;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+
+    margin-bottom: 32px;
+}
+
+@media (max-width: 738px) {
+    html {
+        overflow: hidden;
+    }
+
+    body {
+        padding-top: 32px;
+        overflow-y: auto;
+    }
 }

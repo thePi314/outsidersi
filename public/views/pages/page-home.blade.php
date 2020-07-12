@@ -1,28 +1,132 @@
-{{-- Full Screen Segment --}}
-<div class="actor-perview">
-    <div class="background"></div>
-    <div class="content"></div>
-</div>
-
-
-<div class="fullscreen">
-    <div class="row v-center h-center actors-view" actor="router">
-        <img route="/home/actor1" class="actor" src="./public/images/lik-01.png">
-        <img route="/home/actor2" class="actor" src="./public/images/lik-02.png">
-        <img route="/home/actor3" class="actor" src="./public/images/lik-03.png">
-        <img route="/home/actor4" class="actor" src="./public/images/lik-04.png">
+<div class="welcome-screen">
+    <div class="desktop">
+        <div class="characters">
+            <img class="character" src="./public/images/lik-01.png">
+            <img class="character" src="./public/images/lik-02.png">
+            <img class="character" src="./public/images/lik-03.png">
+            <img class="character" src="./public/images/lik-04.png">
+        
+            <div class="crowd">
+                <img src="./public/images/publikume-left.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-right.png" alt=""/>
+            </div>
+            <div class="crowd">
+                <img src="./public/images/publikume-left.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-middle.png" alt=""/>
+                <img src="./public/images/publikume-right.png" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="characters">
+            <img class="character scaled-up" src="./public/images/lik-01.png">
+            <img class="character" src="./public/images/lik-02.png">
+            <img class="character" src="./public/images/lik-03.png">
+            <img class="character" src="./public/images/lik-04.png">
+        </div>
+        <div class="crowd">
+            <img src="./public/images/publikume-left.png" alt=""/>
+            <img src="./public/images/publikume-middle.png" alt=""/>
+            <img src="./public/images/publikume-middle.png" alt=""/>
+            <img src="./public/images/publikume-middle.png" alt=""/>
+            <img src="./public/images/publikume-middle.png" alt=""/>
+            <img src="./public/images/publikume-middle.png" alt=""/>
+            <img src="./public/images/publikume-right.png" alt=""/>
+        </div>
     </div>
 </div>
-<div class="gallery content-line">
-    <div class="background"></div>
-    <div class="row">
-        <div class="col-10 title">Gallery</div>
+
+{{-- News Line --}}
+<div class="content-line" id="news">
+    <div class="big-title">
+        News
+    </div>
+    <div class="content" amount="3">
+        <div class="box show start">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <span class="box-title">Big News</span>
+            <p class="box-content">
+                This is some very big news guys!
+            </p>
+        </div>
+        <div class="box show">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <span class="box-title">Big News</span>
+            <p class="box-content">
+                This is some very big news guys!
+            </p>
+        </div>
+        <div class="box show end">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <span class="box-title">Big News</span>
+            <p class="box-content">
+                This is some very big news guys!
+            </p>
+        </div>
+        <div class="box">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <span class="box-title">Big News</span>
+            <p class="box-content">
+                This is some very big news guys!
+            </p>
+        </div>
+        <div class="box">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <span class="box-title">Big News</span>
+            <p class="box-content">
+                This is some very big news guys!
+            </p>
+        </div>
     </div>
 </div>
 
-<div class="news-pannel content-line">
-    <div class="background"></div>
-    <div class="row">
-        <div class="col-10 title">News</div>
+{{-- Gallery Line --}}
+<div class="content-line" id="news">
+    <div class="big-title">
+        Gallery
+    </div>
+    <div class="content" amount="3">
+        <div class="box show start">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <p class="box-content">
+                Interesting Picture!
+            </p>
+        </div>
+        <div class="box show">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <p class="box-content">
+                Interesting Picture!
+            </p>
+        </div>
+        <div class="box show end">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <p class="box-content">
+                Interesting Picture!
+            </p>
+        </div>
+        <div class="box">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <p class="box-content">
+                Interesting Picture!
+            </p>
+        </div>
+        <div class="box">
+            <img class="box-background" src="https://picsum.photos/400/300" alt=""/>
+            <p class="box-content">
+                Interesting Picture!
+            </p>
+        </div>
     </div>
 </div>

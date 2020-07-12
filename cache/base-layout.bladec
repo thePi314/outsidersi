@@ -5,7 +5,7 @@
  <?php echo $page->metadata; ?>
 
 
- <title>Brm Brm Sistem</title>
+ <title>Outsajdersi</title>
 
  
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,8 +23,18 @@
 
 </head>
 <body>
+ <div class="background"></div>
+ <?php /* Header */ ?>
+ <?php if($page->hasHeader): ?>
+ <?php echo $this->runChild('header'); ?>
+ <?php endif; ?>
+
  <?php /* Include Page Content */ ?>
  <?php echo $page->content; ?>
 
+
+ <?php if($page->hasFooter): ?>
+ <?php echo $this->runChild('footer'); ?>
+ <?php endif; ?>
 </body>
 </html>

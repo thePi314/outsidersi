@@ -1,6 +1,9 @@
 :root {
     --dimension-actor-scale-max: 1.6;
     --dimension-actor-scale-min: 1;
+    
+    --dimension-actor-mobile-scale-max: 1;
+    --dimension-actor-mobile-scale-min: 0.8;
 
     --position-actor-x: 0;
     --position-actor-y: 0;
@@ -19,6 +22,17 @@
         transform: scale(var(--dimension-actor-scale-min));
     }
 }
+@keyframes scale-up-center-mobile {
+    100% {
+        transform: scale(var(--dimension-actor-mobile-scale-max));
+    }
+}
+@keyframes scale-down-center-mobile {
+    100% {
+        transform: scale(var(--dimension-actor-mobile-scale-min));
+    }
+}
+
 @keyframes blur-up {
     100% {
         filter: blur(8px);
@@ -76,284 +90,99 @@
         transform: translateX(0);
     }
 }
-@keyframes timer {
-    100% {}
-} 
 
-.fullscreen {
-    display: flex;
-    flex-flow: column;
-    height: 100vh;
-    width: 100vw;
-
-    overflow: hidden;
+body {
+    padding-top: 216px;
 }
 
-.fullscreen > .v-center {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.fullscreen > .h-center {
-    margin-right: auto;
-    margin-left: auto;    
-}
-
-.fullscreen > .v-bottom {
-    margin-top: auto;
-}
-
-.fullscreen > .background-layer {
-    position: absolute;
-}
-
-.fullscreen > .background-layer.v-bottom {
-    bottom: 0;
-}
-
-.actors-view > * {
-    margin: auto;
-}
-
-.actor {
-    z-index: 1;
+.characters > .character {
     filter: drop-shadow(30px 10px 8px black);
 }
 
-.actor.scaled-up {
+.welcome-screen > .desktop > .characters {
+    display: flex;
+    margin-bottom: 114px;
+}
+.welcome-screen > .desktop > .characters > .character {
+    margin: auto;
+}
+.welcome-screen > .desktop > .characters > .character {
+    z-index: 1;
+}
+.welcome-screen > .desktop > .characters > .character.scaled-up {
     transform: scale(var(--dimension-actor-scale-max));
     z-index: 3;
 }
-
-.actor.scaling-up {
+.welcome-screen > .desktop > .characters > .character.scaling-up {
     animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     z-index: 2;
 }
-.actor.scaling-down {
+.welcome-screen > .desktop > .characters > .character.scaling-down {
     animation: scale-down-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     z-index: 2;
 }
-
-.actor.bluring-up {
-    animation: blur-up 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.actor.bluring-down {
-    animation: blur-down 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.actor.blured-up {
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
-
-.publikume {
-    filter: drop-shadow(30px 10px 8px black);
-}
-
-.publikume.slide-up-16[delay="0.1s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.1s;
-}
-
-.publikume.slide-up-16[delay="0.2s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.2s;
-}
-
-.publikume.slide-up-16[delay="0.3s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.3s;
-}
-
-.publikume.slide-up-16[delay="0.4s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.4s;
-}
-
-.publikume.slide-up-16[delay="0.5s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.5s;
-}
-
-.publikume.slide-up-16[delay="0.6s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.6s;
-}
-
-.publikume.slide-up-16[delay="0.7s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.7s;
-}
-
-.publikume.slide-up-16[delay="0.8s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.8s;
-}
-
-.publikume.slide-up-16[delay="0.9s"] {
-    animation: slide-up-16 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.9s;
-}
-
-.publikume[delay="0.1s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.1s;
-}
-.publikume[delay="0.2s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.2s;
-}
-.publikume[delay="0.3s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.3s;
-}
-.publikume[delay="0.4s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.4s;
-}
-.publikume[delay="0.5s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.5s;
-}
-.publikume[delay="0.6s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.6s;
-}
-.publikume[delay="0.7s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.7s;
-}
-.publikume[delay="0.8s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.8s;
-}
-.publikume[delay="0.9s"] {
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay: 0.9s;
-}
-
-.publikume.slide-down-16{
-    animation: slide-down-16 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.publikume-layer {
-    bottom: -12px;
-}
-
-.actor.hide {
-    opacity: 0;
-    filter: none;
-}
-
-.actor-perview {
-    display: none;
+.welcome-screen > .desktop > .characters > .crowd {
+    display: flex;
+    flex-flow: row;
     position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-}
-
-.actor-perview.show {
-    display: block;
-}
-
-.actor-perview > .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-
+    bottom: 0;
     width: 100%;
-    height: 100%;
-
-    opacity: 0.7;
-    background: black;
-    z-index: 11;
 }
-
-
-.actor-perview > .content {
-    position: relative;
-    z-index: 15;
-    padding: 64px;
-}
-
-.publikume-layer > * {
+.welcome-screen > .desktop > .characters > .crowd > img{
     margin: 0 auto;
 }
-
-.publikume-layer > *:first-child {
+.welcome-screen > .desktop > .characters > .crowd > img:first-child {
     margin-left: 0;
 }
-.publikume-layer > *:last-child {
+.welcome-screen > .desktop > .characters > .crowd > img:last-child {
     margin-right: 0;
 }
 
-img.parview-actor {
-    animation: actor-focus 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+.welcome-screen > .mobile {
+    display: none;
+    overflow-x: hidden;
 }
+.welcome-screen > .mobile > .characters {
+    display: flex; 
+    flex-flow: row;
 
-.actor-perview {
-    color: whitesmoke;
+    overflow-x: hidden;
 }
-
-.actor-perview .title {
-    font-size: 24px;
-}
-
-.actor-perview .info {
-    font-size: 16px;
-}
-
-.content-line {
-    position: relative;
-    margin: 64px 0;
-
-    width: 100%;
-    min-height: 256px;
-
-    box-shadow: 0px 0px 24px black;   
-}
-
-.content-line > * {
-    position: relative;
-    margin-left: 32px;
-}
-
-.content-line > .background {
+.welcome-screen > .mobile > .characters > .character {
     margin: 0;
+    transform: scale(var(--dimension-actor-mobile-scale-min));
+}
+.welcome-screen > .mobile > .characters > .character:first-child {
+    margin-left: auto;
+}
+.welcome-screen > .mobile > .characters > .character:last-child {
+    margin-right: auto;
+}
+.welcome-screen > .mobile > .characters > .character.scaled-up {
+    transform: scale(var(--dimension-actor-mobile-scale-max));
+    z-index: 3;
+}
+.welcome-screen > .mobile > .characters > .character.scaling-up {
+    animation: scale-up-center-mobile 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    z-index: 2;
+}
+.welcome-screen > .mobile > .characters > .character.scaling-down {
+    animation: scale-down-center-mobile 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    z-index: 2;    
+}
+
+.welcome-screen > .mobile > .crowd {
     position: absolute;
-    height: 106%;
-    width: 120%;
-
-    background: url('/public/images/background-03-scalable-darken.png');
-    filter: blur(1px);
-    background-size: 256px;
-    top: -12px;
-    left: -6px;
-    box-shadow: inset 0px 0px 4px black;
-    border-bottom: solid 12px black;
-    border-top: solid 12px black;
+    display: flex;
+    flex-flow: row;
 }
 
-.content-line .title {
-    font-family: Arial;
-    color: whitesmoke;
-    font-size: 24px;
+@media (max-width: 738px) {
+    .welcome-screen > .desktop {
+        display: none;
+    }
+    .welcome-screen > .mobile {
+        display: block;
+    }
 }
-
-.gallery {
-    height: 192px;
-    box-shadow: none;
-
-    margin: 0;
-}
-
-.gallery > .background {
-    border-top: none;
-}
-
-.news-pannel {}
-

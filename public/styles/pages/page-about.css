@@ -1,0 +1,22 @@
+.info-box {
+	width: 30%;
+	background: #1f1f20;
+	color: whitesmoke;
+	border-radius: 6px;
+}
+
+.info-box > .info-title {
+    font-size: 20px;
+    background: #101010;
+    padding: 4px;
+}
+
+.info-box > .info-content {
+    padding: 4px;
+}
+
+@media (max-width: 738px) {
+    .info-box {
+        width: 90%;
+    }
+}

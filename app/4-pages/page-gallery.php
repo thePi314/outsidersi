@@ -4,7 +4,7 @@ namespace Pages;
 use Controller\Page;
 use Controllers\WLBlade;
 
-class HomePage extends Page {
+class GalleryPage extends Page {
     protected static function getScripts(){
         return [
             '/public/scripts/pages/page-home.js'
@@ -18,6 +18,6 @@ class HomePage extends Page {
     }
 
     protected static function render(){
-        return WLBlade::render('pages.page-home');
+        return 'Gallery';
     }
 }

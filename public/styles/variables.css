@@ -1,10 +1,12 @@
 :root {
+    /* Screen Sizes */
+    --screen-width-size-mobile: 738px; 
+    /* --screen-width-size-desktop:  */
+
     /* Dimensions */
-    --dimension-header-height: 48px;
-    --dimension-sidebar-width: 256px;
+    --dimension-dashboard-header-height: 48px;
+    --dimension-dashboard-sidebar-width: 256px;
 
     /* Color Names */
     /* http://chir.ag/projects/name-that-color/ */
-    --color-midnight-blue: #003366;
-    --color-oxford-blue: #354052;
 }

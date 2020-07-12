@@ -11,18 +11,25 @@ class Page
     protected static $mustBeLoggedIn = false;
 
     protected static $mainStylesheets = [
+        'public/styles/variables.css',
+        'public/styles/fonts.css',
         'public/styles/main.css',
+        'public/styles/components/content-line.css',
         'public/styles/layouts/row.css',
         'public/styles/layouts/font-icons.css',
         'public/styles/layouts/content-line.css',
-        'public/styles/layouts/box.css',
+        'public/styles/layouts/table.css',
+        'public/styles/layouts/collection.css',
         'public/styles/segments/segment-header.css',
         'public/styles/segments/segment-footer.css'
     ];
+    
     protected static $mainScripts     = [
         'public/scripts/libs/component.js',
         'public/scripts/libs/font-icons.js',
+        'public/scripts/libs/swipe-event.js',
         'public/scripts/main.js',
+        'public/scripts/segments/segment-header.js'
     ];
 
     /* Append Scripts needed at page */
@@ -39,7 +46,7 @@ class Page
     protected static function getMetadata() {
         return [
             '<meta charset="UTF-8">',
-            '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">',
             '<meta http-equiv="X-UA-Compatible" content="ie=edge">'
         ];
     }

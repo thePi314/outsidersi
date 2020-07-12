@@ -2,8 +2,7 @@
 
 function load_files($PATH = __DIR__)
 {
-    $controllers = scandir($PATH);
-    $controllers = array_slice($controllers, 2);
+    $controllers = array_slice(scandir($PATH),2);
 
     foreach ($controllers as $controller) {
         if (substr_count($controller, '.') == 0) {
